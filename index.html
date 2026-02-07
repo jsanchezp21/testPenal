@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Test Administrativo - Modo Estudio</title>
+<style>
+:root{
+  --bg:#0b1220;--card:rgba(255,255,255,.08);--text:rgba(255,255,255,.92);
+  --muted:rgba(255,255,255,.7);--border:rgba(255,255,255,.14);
+  --good:rgba(34,197,94,.25);--bad:rgba(239,68,68,.25);
+  --goodb:rgba(34,197,94,.6);--badb:rgba(239,68,68,.6);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);
+  background:radial-gradient(1200px 800px at 20% 10%, rgba(59,130,246,.25), transparent 60%),
+             radial-gradient(1000px 700px at 80% 30%, rgba(34,197,94,.18), transparent 55%), var(--bg);
+}
+.wrap{max-width:980px;margin:0 auto;padding:28px 18px 40px}
+header{display:flex;gap:16px;align-items:baseline;justify-content:space-between;flex-wrap:wrap;margin-bottom:18px}
+h1{font-size:34px;letter-spacing:-.02em;margin:0;line-height:1.15}
+.sub{color:var(--muted);font-size:14px;margin-top:6px}
+.topbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.pill{padding:8px 10px;border:1px solid var(--border);background:rgba(255,255,255,.04);border-radius:999px;font-size:13px;color:var(--muted)}
+.btn{padding:10px 12px;border-radius:10px;border:1px solid var(--border);background:rgba(255,255,255,.06);color:var(--text);cursor:pointer;font-weight:600}
+.btn:hover{border-color:rgba(255,255,255,.24)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.card{border:1px solid var(--border);background:var(--card);border-radius:16px;padding:18px;box-shadow:0 10px 30px rgba(0,0,0,.25);backdrop-filter:blur(6px)}
+.meta{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:10px;color:var(--muted);font-size:13px}
+.q{font-size:18px;margin:0 0 14px 0;line-height:1.35}
+.opts{display:grid;gap:10px}
+.opt{border:1px solid var(--border);background:rgba(255,255,255,.04);border-radius:14px;padding:12px;cursor:pointer;display:flex;gap:10px;align-items:flex-start;transition:transform .02s ease,border-color .15s ease,background .15s ease}
+.opt:hover{border-color:rgba(255,255,255,.26);transform:translateY(-1px)}
+.badge{min-width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;border-radius:8px;border:1px solid var(--border);color:var(--muted);font-weight:800;background:rgba(255,255,255,.03)}
+.opt.correct{background:var(--good);border-color:var(--goodb)}
+.opt.incorrect{background:var(--bad);border-color:var(--badb)}
+.opt.reveal-correct{outline:2px solid var(--goodb);outline-offset:2px}
+.explain{margin-top:14px;padding:12px;border-radius:14px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--muted);display:none;white-space:pre-wrap;line-height:1.35}
+.footer{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-top:12px}
+.nav{display:flex;gap:10px;flex-wrap:wrap}
+.hint{color:var(--muted);font-size:13px;margin-top:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div>
+    <h1>Test Administrativo – Modo Estudio</h1>
+    <div class="sub">Corrige al instante. Pulsa “Explicar por qué” cuando quieras.</div>
+  </div>
+  <div class="topbar">
+    <div class="pill" id="counter">0 / 0</div>
+    <div class="pill" id="score">Aciertos: 0</div>
+    <button class="btn" id="reset">Reiniciar</button>
+  </div>
+</header>
+
+<div class="card">
+  <div class="meta">
+    <div id="topic">—</div>
+    <div id="qid">—</div>
+  </div>
+  <p class="q" id="question">Cargando…</p>
+  <div class="opts" id="options"></div>
+
+  <div class="footer">
+    <div class="nav">
+      <button class="btn" id="prev">Anterior</button>
+      <button class="btn" id="next">Siguiente</button>
+    </div>
+    <div class="nav">
+      <button class="btn" id="toggleExplain" disabled>Explicar por qué</button>
+    </div>
+  </div>
+
+  <div class="explain" id="explain"></div>
+</div>
+
+<div class="hint">Consejo: si una pregunta solo muestra una opción, es porque en el PDF subido no aparecían las demás alternativas.</div>
+</div>
+
+<script>
+const QUESTIONS = [
+  {
+    "id": 1,
+    "topic": "Violencia de Género",
+    "question": "Con respecto al concepto de violencia de género, indique la respuesta CORRECTA:",
+    "options": {
+      "a": "Violencia ejercida por hombres contra mujeres como manifestación de discriminación.",
+      "b": "Violencia ejercida sobre cualquier miembro de la comunidad familiar.",
+      "c": "Uso intencional de la fuerza o poder contra cualquier persona.",
+      "d": "Violencia intrafamiliar contra ascendientes y descendientes femeninos."
+    },
+    "answer": "a"
+  },
+  {
+    "id": 2,
+    "topic": "Violencia de Género",
+    "question": "Una conducta destructiva como quemar un vestido a la víctima es propia de la violencia:",
+    "options": {
+      "a": "Física.",
+      "b": "Psicológica.",
+      "c": "Económica.",
+      "d": "Ninguna de las anteriores."
+    },
+    "answer": "b"
+  },
+  {
+    "id": 3,
+    "topic": "Violencia de Género",
+    "question": "El denominado “débito conyugal” es propio de la violencia:",
+    "options": {
+      "a": "Física.",
+      "b": "Económica.",
+      "c": "Sexual.",
+      "d": "Psicológica."
+    },
+    "answer": "c"
+  },
+  {
+    "id": 4,
+    "topic": "Violencia Doméstica",
+    "question": "NO se exige el requisito de convivencia en los casos de violencia doméstica cuando se produce entre:",
+    "options": {
+      "a": "Parejas del mismo sexo.",
+      "b": "Ascendientes.",
+      "c": "Descendientes.",
+      "d": "Hermanos."
+    },
+    "answer": "a"
+  },
+  {
+    "id": 5,
+    "topic": "Derecho Penal",
+    "question": "¿Qué conducta NO estaría incluida en el denominado maltrato puntual?",
+    "options": {
+      "a": "Menoscabo psíquico constitutivo de lesiones leves.",
+      "b": "Lesiones leves del art. 147.2 CP.",
+      "c": "Maltrato de obra sin lesión.",
+      "d": "Lesiones del tipo básico del art. 147.1 CP."
+    },
+    "answer": "d"
+  },
+  {
+    "id": 6,
+    "topic": "Procedimiento Penal",
+    "question": "Será necesario, como requisito de perseguibilidad, la interposición de denuncia cuando la conducta se tipifique como:",
+    "options": {
+      "a": "Amenazas leves.",
+      "b": "Injuria leve.",
+      "c": "Coacciones leves.",
+      "d": "Injurias, amenazas o coacciones leves en el ámbito de la violencia de género o doméstica."
+    },
+    "answer": "b"
+  },
+  {
+    "id": 7,
+    "topic": "Derecho Penal",
+    "question": "Maltrato habitual. Respecto a los requisitos para apreciar la habitualidad del art. 173.3 CP, indique la respuesta INCORRECTA:",
+    "options": {
+      "a": "Se atenderá al número de actos de violencia acreditados.",
+      "b": "Los actos violentos deben haber sido objeto de enjuiciamiento previo.",
+      "c": "Es indiferente que la violencia se ejerza sobre la misma o distintas víctimas.",
+      "d": "Se castiga la violencia física o psíquica ejercida de forma reiterada."
+    },
+    "answer": "b"
+  },
+  {
+    "id": 8,
+    "topic": "Derecho Penal",
+    "question": "¿En qué delito NO cabe la imposición de la libertad vigilada como consecuencia jurídica?",
+    "options": {
+      "a": "Lesiones agravadas del art. 148.4 CP.",
+      "b": "Lesiones derivadas de maltrato puntual del art. 153.1 CP.",
+      "c": "Lesiones derivadas de maltrato puntual del art. 153.2 CP.",
+      "d": "Amenazas leves del art. 171 CP."
+    },
+    "answer": "d"
+  },
+  {
+    "id": 9,
+    "topic": "Derecho Penal",
+    "question": "El delito de quebrantamiento de condena del art. 468.2 CP requiere como elemento normativo:",
+    "options": {
+      "a": "La previa existencia de una resolución judicial.",
+      "b": "El incumplimiento de la pena o medida.",
+      "c": "El dolo de quebrantar la pena o medida.",
+      "d": "El consentimiento de la víctima."
+    },
+    "answer": "a"
+  },
+  {
+    "id": 10,
+    "topic": "Derecho Penal",
+    "question": "La alevosía súbita recibe también la denominación de alevosía:",
+    "options": {
+      "a": "Inopinada.",
+      "b": "Convivencial.",
+      "c": "Sorprensiva.",
+      "d": "Proditoria."
+    },
+    "answer": "b"
+  },
+  {
+    "id": 11,
+    "topic": "Circunstancias Modificativas",
+    "question": "Cuando el sujeto activo es mujer y la víctima hombre, ¿qué agravantes pueden aplicarse?",
+    "options": {
+      "a": "Parentesco, género y sexo.",
+      "b": "Alevosía convivencial y género.",
+      "c": "Género y parentesco.",
+      "d": "Sexo y parentesco."
+    },
+    "answer": "d"
+  },
+  {
+    "id": 12,
+    "topic": "Medidas Civiles",
+    "question": "Las medidas civiles acordadas en una Orden de Protección tendrán una vigencia de:",
+    "options": {
+      "a": "30 días prorrogables si se inicia proceso de familia.",
+      "b": "30 días sin excepción.",
+      "c": "Hasta la finalización del proceso penal.",
+      "d": "30 días si se inicia proceso penal y civil."
+    },
+    "answer": "a"
+  },
+  {
+    "id": 13,
+    "topic": "Derecho Penal",
+    "question": "La pena de privación del derecho a la tenencia y porte de armas en el delito del art. 153 CP es:",
+    "options": {
+      "a": "Potestativa si se usaron armas.",
+      "b": "Sustituible por multa.",
+      "c": "Obligatoria en todo caso.",
+      "d": "Obligatoria para FCS y FAS y potestativa en el resto."
+    },
+    "answer": "c"
+  },
+  {
+    "id": 14,
+    "topic": "Violencia de Género",
+    "question": "¿Caben medidas de justicia restaurativa entre víctima y agresor en violencia de género?",
+    "options": {
+      "a": "Están prohibidas en todo caso.",
+      "b": "Sí, si lo autoriza el juez.",
+      "c": "Sí, si la víctima accede libremente.",
+      "d": "Sí, si lo solicita la víctima."
+    },
+    "answer": "a"
+  },
+  {
+    "id": 15,
+    "topic": "Asistencia Jurídica Gratuita",
+    "question": "A los efectos de la concesión del beneficio de jusiticia gratuita, La condición de víctima a efectos de justicia gratuita se adquiere cuando:",
+    "options": {
+      "a": "Se formula denuncia.",
+      "b": "Se interpone querella.",
+      "c": "Se inicia procedimiento penal.",
+      "d": "Todas las opciones son correctas."
+    },
+    "answer": "d"
+  },
+  {
+    "id": 16,
+    "topic": "Organización Judicial",
+    "question": "En relación con los Tribunales de Instancia (LO 1/2025), ne función de la carga de trabajo que exista en materia de violencia de género, en cada Tribunal de Instancia de un partido judicial...:",
+    "options": {
+      "a": "Si la sección es única, No habrá juez que se encargue de los delitos de violencia sobre la mujer.",
+      "b": "Se atribuirá en exclusiva la competencia en materia de violencia sobre la mujer a un solo juez con exención de reparto.",
+      "c": "Se crearán en este caso los Juzgados de Paz necesarios que serán oportunamente reforzados.",
+      "d": "Se establece como novedad la asunción de la instrucción por parte del Ministerio Fiscal."
+    },
+    "answer": "b"
+  },
+  {
+    "id": 17,
+    "topic": "Competencia Judicial",
+    "question": "En caso de conflicto de competencia entre secciones de violencia sobre la mujer y la sección de violencia contra la infancia y la adolescencia, será competente:",
+    "options": {
+      "a": "La Sección de Violencia contra la Infancia y la Adolescencia.",
+      "b": "La que determine el órgano de gobierno del TSJ  de la demarcación territorial correspondiente.",
+      "c": "La Sección de Violencia sobre la Mujer, en todo caso.",
+      "d": "Se repartirá la causa entre ambas secciones."
+    },
+    "answer": "c"
+  },
+  {
+    "id": 18,
+    "topic": "Procedimiento Penal",
+    "question": "¿Cuál de los siguientes delitos de violencia de género, NO puede enjuiciarse por el procedimiento rápido de enjuiciamiento de determinados delitos?",
+    "options": {
+      "a": "Amenazas leves.",
+      "b": "Maltrato de obra.",
+      "c": "Coacciones leves.",
+      "d": "Agresión sexual con penetración."
+    },
+    "answer": "d"
+  },
+  {
+    "id": 19,
+    "topic": "Prueba",
+    "question": "A que se refiere la exigencia de ausencia de incredibilidad subjetiva del testimonio de la víctima para su valoración como prueba de cargo:",
+    "options": {
+      "a": "Que el relato sea coherente.",
+      "b": "Que existan testigos.",
+      "c": "Que no existan móviles espurios.",
+      "d": "Que la víctima jure decir la verdad."
+    },
+    "answer": "c"
+  },
+  {
+    "id": 20,
+    "topic": "LECrim",
+    "question": "Tras la reforma de la LO 8/2021, ¿puede una víctima de violencia de género acogerse a la dispensa de declarar contra su marido (art. 416 LECrim):",
+    "options": {
+      "a": "No es aplicable si fue acusación particular.",
+      "b": "Es aplicable siempre.",
+      "c": "No es aplicable en ningún caso.",
+      "d": "Es aplicable salvo que tengan hijos."
+    },
+    "answer": "a"
+  },
+  {
+    "id": 21,
+    "topic": "Examen Penal Parte Especial",
+    "question": "Secuestros. El secuestro de una persona exigiendo alguna condición para ponerla en libertad, es un delito complejo que incluye, por un lado, un delito de detenciones ilegales y, por otro, unas…",
+    "options": {
+      "a": "Coacciones condicionales.",
+      "b": "Coacciones incondicionales.",
+      "c": "Amenazas condicionales.",
+      "d": "Amenazas incondicionales."
+    },
+    "answer": "c"
+  },
+  {
+    "id": 22,
+    "topic": "Examen Penal Parte Especial",
+    "question": "Acoso sexual. ¿Cuál de los siguientes requisitos NO se considera necesario para que una conducta sea tipificada como acoso sexual?",
+    "options": {
+      "a": "Actos reiterados de hostigamiento.",
+      "b": "Ámbito de relación concreto.",
+      "c": "Situación objetiva y gravemente hostil.",
+      "d": "Prevalimiento de superioridad laboral."
+    },
+    "answer": "d"
+  },
+  {
+    "id": 23,
+    "topic": "Examen Penal Parte Especial",
+    "question": "El asesinato. Con respecto al tipo subjetivo del asesinato, indique la respuesta CORRECTA.",
+    "options": {
+      "a": "No se admite la tentativa aunque concurran los aspectos subjetivos y objetivos de las circunstancias que caracterizan el hecho.",
+      "b": "Admite solamente el dolo propiamente intencional o de primer grado en el modo de ejecutar los actos.",
+      "c": "En cuanto al dolo eventual, la jurisprudencia lo ha aceptado en alguna ocasión pero únicamente con respecto al resultado.",
+      "d": "Al igual que ocurre con el homicidio, el asesinato contempla la comisión por imprudencia o modalidad imprudente."
+    },
+    "answer": "c"
+  },
+  {
+    "id": 24,
+    "topic": "Examen Penal Parte Especial",
+    "question": "La trata de seres humanos. Indique la opción CORRECTA.",
+    "options": {
+      "a": "Siempre tendrá carácter transnacional.",
+      "b": "Va dirigido exclusivamente contra personas extranjeras.",
+      "c": "Se trata de un delito de consumación anticipada.",
+      "d": "Protege los mismos bienes jurídicos que el tráfico ilícito de inmigrantes."
+    },
+    "answer": "c"
+  },
+  {
+    "id": 25,
+    "topic": "Examen Penal Parte Especial",
+    "question": "Relaciones entre la parte general y la parte especial del Código penal. Son características del Derecho Penal Especial…",
+    "options": {
+      "a": "Abstracción.",
+      "b": "Practicidad.",
+      "c": "Generalidad.",
+      "d": "Las opciones de respuesta a) y b) son correctas."
+    },
+    "answer": "b"
+  },
+  {
+    "id": 26,
+    "topic": "Examen Penal Parte Especial",
+    "question": "Tráfico ilícito de órganos humanos. ¿Qué se entiende por tráfico de órganos a efectos penales?",
+    "options": {
+      "a": "La extracción ilícita de órganos humanos.",
+      "b": "La preparación de órganos ilícitamente obtenidos.",
+      "c": "El uso de órganos ilícitamente extraídos con la finalidad de su trasplante.",
+      "d": "Todas las opciones de respuesta son correctas."
+    },
+    "answer": "d"
+  },
+  {
+    "id": 27,
+    "topic": "Examen Penal Parte Especial",
+    "question": "El Stalking. ¿Cómo se denomina también este delito?",
+    "options": {
+      "a": "Acoso proditorio.",
+      "b": "Acoso doméstico.",
+      "c": "Acoso inmobiliario.",
+      "d": "Acoso sexual."
+    },
+    "answer": "a"
+  },
+  {
+    "id": 28,
+    "topic": "Examen Penal Parte Especial",
+    "question": "Exhibicionismo y provocación sexual. En relación con el exhibicionismo y la provocación sexual, indique la respuesta INCORRECTA.",
+    "options": {
+      "a": "Cabe la comisión imprudente si se lleva a cabo ante menores de edad.",
+      "b": "Exige tendencia provocadora del autor de involucrar a la víctima con su acción en un contacto sexual.",
+      "c": "El material pornográfico puede consistir en un escrito.",
+      "d": "El elemento subjetivo se deduce de circunstancias como el lugar y la hora."
+    },
+    "answer": "a"
+  },
+  {
+    "id": 29,
+    "topic": "Examen Penal Parte Especial",
+    "question": "El homicidio. A pesar de que el Código penal no da una definición en cuanto al momento de comienzo de la vida, la doctrina mayoritaria se inclina por considerar, a efectos penales, que solo puede ser objeto de homicidio…",
+    "options": {
+      "a": "La persona que está separada del claustro materno, es decir, la persona nacida.",
+      "b": "No solo es necesaria la separación del claustro materno, sino que se exige que exista respiración.",
+      "c": "Basta con que se haya cortado el cordón umbilical.",
+      "d": "Es suficiente con que se haya iniciado el parto."
+    },
+    "answer": "a"
+  },
+  {
+    "id": 30,
+    "topic": "Examen Penal Parte Especial",
+    "question": "Allanamiento de morada. Con respecto al allanamiento de morada, indique la respuesta CORRECTA.",
+    "options": {
+      "a": "Se exige dolo específico de atentar contra la intimidad domiciliaria.",
+      "b": "La voluntad de exclusión del titular del derecho puede ser expresa, tácita o presunta.",
+      "c": "Exige la habitación de forma, no solo habitual, sino también permanente.",
+      "d": "El elemento positivo consiste en que la conducta punible se perpetre contra la voluntad del morador."
+    },
+    "answer": "b"
+  },
+  {
+    "id": 31,
+    "topic": "Examen Penal Parte Especial",
+    "question": "Las lesiones. Es común a todos los tipos de lesiones la conducta típica, consistente en el menoscabo de la…",
+    "options": {
+      "a": "Integridad corporal.",
+      "b": "Salud física.",
+      "c": "Salud mental.",
+      "d": "Todas las opciones de respuesta son correctas."
+    },
+    "answer": "d"
+  },
+  {
+    "id": 32,
+    "topic": "Examen Penal Parte Especial",
+    "question": "Delitos contra el honor. Indique la proposición INCORRECTA.",
+    "options": {
+      "a": "Se considera que las ofensas contra el honor están hechas con publicidad cuando se propaguen por medio de la imprenta, la radiodifusión o por cualquier otro medio de eficacia semejante.",
+      "b": "La condena de un Juez o Tribunal extranjero, impuesta por delitos contra el honor, será equiparada a las sentencias de los Jueces o Tribunales españoles a efecto de la aplicación de la circunstancia agravante de reincidencia.",
+      "c": "El perdón del ofendido o de su representante legal extingue la acción penal.",
+      "d": "La reparación del daño comprende también la publicación o divulgación de la sentencia condenatoria, a costa del condenado."
+    },
+    "answer": "b"
+  },
+  {
+    "id": 33,
+    "topic": "Examen Penal Parte Especial",
+    "question": "El delito de detención ilegal. Si la detención dura lo imprescindible para llevar a cabo el otro delito que se pretenda cometer, la detención ilegal, en virtud del principio de consunción, quedará absorbida por el otro delito, por lo que concurre concurso…",
+    "options": {
+      "a": "De leyes.",
+      "b": "Real de delitos.",
+      "c": "Medial de delitos.",
+      "d": "Ideal de delitos."
+    },
+    "answer": "a"
+  },
+  {
+    "id": 34,
+    "topic": "Examen Penal Parte Especial",
+    "question": "Delitos contra la libertad sexual. ¿Cuál de las siguientes normas de común aplicación a los delitos contra la libertad sexual NO se encuentra recogida en el Título VIII del Código penal, dedicado a los delitos contra la libertad sexual?",
+    "options": {
+      "a": "Reglas de procedibilidad.",
+      "b": "Previsión de libertad vigilada.",
+      "c": "La regla sobre la prescripción.",
+      "d": "Las que se refieren al concurso de delitos."
+    },
+    "answer": "c"
+  },
+  {
+    "id": 35,
+    "topic": "Examen Penal Parte Especial",
+    "question": "Las agresiones sexuales. ¿Qué circunstancia concurre cuando la presencia de varios sujetos, aunque no anuncien expresamente ningún mal con palabras o gestos, sea apta por las circunstancias para provocar una situación de amedrentamiento en la víctima de la que aprovecharse para llevar a cabo el contacto sexual?",
+    "options": {
+      "a": "Intimidación sexual.",
+      "b": "Intimidación ambiental.",
+      "c": "Violencia sexual.",
+      "d": "Violencia ambiental."
+    },
+    "answer": "b"
+  },
+  {
+    "id": 36,
+    "topic": "Examen Penal Parte Especial",
+    "question": "Delito de participación en riña tumultuaria. Para que haya acometimiento…",
+    "options": {
+      "a": "Basta el peligro de la producción de resultados lesivos.",
+      "b": "Es suficiente con que haya agresión verbal.",
+      "c": "La agresión tiene que ser concreta, personal y directa.",
+      "d": "Se exige la intervención de al menos dos personas."
+    },
+    "answer": "a"
+  },
+  {
+    "id": 37,
+    "topic": "Examen Penal Parte Especial",
+    "question": "Corrupción de menores. El concepto de pornografía infantil NO incluye, en ningún caso,…",
+    "options": {
+      "a": "Imágenes realistas.",
+      "b": "Registros de voz.",
+      "c": "Imágenes virtuales.",
+      "d": "Representaciones visuales."
+    },
+    "answer": "b"
+  },
+  {
+    "id": 38,
+    "topic": "Examen Penal Parte Especial",
+    "question": "Con respecto a las conductas tipificadas como delito de coacción inmobiliaria y acoso inmobiliario, indique la respuesta CORRECTA.",
+    "options": {
+      "a": "Ambas se tratan de supuestos agravados del tipo básico.",
+      "b": "La diferencia fundamental entre ambas es la concurrencia o no de violencia.",
+      "c": "Es indiferente que concurra la legitimidad o ilegitimidad en el disfrute de la vivienda.",
+      "d": "Todas las opciones de respuesta son correctas."
+    },
+    "answer": "b"
+  },
+  {
+    "id": 39,
+    "topic": "Examen Penal Parte Especial",
+    "question": "La usurpación. El que ocupare, utilizando para entrar fuerza en las cosas, sin autorización debida, un inmueble, vivienda o edificio ajenos que no constituyan morada, comete el delito denominado como ocupación…",
+    "options": {
+      "a": "Pacífica.",
+      "b": "Violenta.",
+      "c": "Injusta.",
+      "d": "Material."
+    },
+    "answer": "a"
+  },
+  {
+    "id": 40,
+    "topic": "Examen Penal Parte Especial",
+    "question": "Lesiones al feto. Si llegase a consumarse, el aborto doloso absorbería las lesiones dolosas al feto, pero la relación entre lesiones al feto y tentativa de aborto es de…",
+    "options": {
+      "a": "Alternatividad.",
+      "b": "Especialidad.",
+      "c": "Consunción.",
+      "d": "Subsidiariedad."
+    },
+    "answer": "a"
+  }
+]
+;
+
+let idx = 0;
+let correctCount = 0;
+const answered = new Map();
+
+const elCounter = document.getElementById('counter');
+const elScore = document.getElementById('score');
+const elTopic = document.getElementById('topic');
+const elQid = document.getElementById('qid');
+const elQuestion = document.getElementById('question');
+const elOptions = document.getElementById('options');
+const elExplain = document.getElementById('explain');
+const btnToggleExplain = document.getElementById('toggleExplain');
+
+function updateTop() {
+  elCounter.textContent = `${idx+1} / ${QUESTIONS.length}`;
+  elScore.textContent = `Aciertos: ${correctCount}`;
+}
+
+function render() {
+  const q = QUESTIONS[idx];
+  updateTop();
+  elTopic.textContent = q.topic || '—';
+  elQid.textContent = `ID: ${q.id}`;
+  elQuestion.textContent = q.question;
+
+  elOptions.innerHTML = '';
+  elExplain.style.display = 'none';
+  elExplain.textContent = q.explanation || '';
+  btnToggleExplain.disabled = !(q.explanation && q.explanation.trim().length > 0);
+  btnToggleExplain.textContent = 'Explicar por qué';
+
+  const chosen = answered.get(q.id);
+
+  for (const [key, text] of Object.entries(q.options)) {
+    const opt = document.createElement('div');
+    opt.className = 'opt';
+    opt.dataset.key = key;
+
+    const badge = document.createElement('div');
+    badge.className = 'badge';
+    badge.textContent = key.toUpperCase();
+
+    const span = document.createElement('div');
+    span.textContent = text;
+
+    opt.appendChild(badge);
+    opt.appendChild(span);
+    opt.addEventListener('click', () => onSelect(q, key));
+
+    elOptions.appendChild(opt);
+  }
+
+  if (chosen) showCorrection(q, chosen);
+
+  document.getElementById('prev').disabled = idx === 0;
+  document.getElementById('next').disabled = idx === QUESTIONS.length - 1;
+}
+
+function onSelect(q, key) {
+  if (!answered.has(q.id)) {
+    answered.set(q.id, key);
+    if (key === q.answer) correctCount++;
+  }
+  showCorrection(q, answered.get(q.id));
+  updateTop();
+}
+
+function showCorrection(q, chosenKey) {
+  const opts = Array.from(document.querySelectorAll('.opt'));
+  opts.forEach(o => {
+    o.classList.remove('correct', 'incorrect', 'reveal-correct');
+    o.style.pointerEvents = 'none';
+  });
+
+  const chosenEl = opts.find(o => o.dataset.key === chosenKey);
+  const correctEl = opts.find(o => o.dataset.key === q.answer);
+
+  if (chosenEl) {
+    if (chosenKey === q.answer) chosenEl.classList.add('correct');
+    else chosenEl.classList.add('incorrect');
+  }
+  if (correctEl && chosenKey !== q.answer) correctEl.classList.add('reveal-correct');
+}
+
+btnToggleExplain.addEventListener('click', () => {
+  if (btnToggleExplain.disabled) return;
+  const isOpen = elExplain.style.display === 'block';
+  elExplain.style.display = isOpen ? 'none' : 'block';
+  btnToggleExplain.textContent = isOpen ? 'Explicar por qué' : 'Ocultar explicación';
+});
+
+document.getElementById('prev').addEventListener('click', () => { if (idx > 0) idx--; render(); });
+document.getElementById('next').addEventListener('click', () => { if (idx < QUESTIONS.length - 1) idx++; render(); });
+document.getElementById('reset').addEventListener('click', () => { idx = 0; correctCount = 0; answered.clear(); render(); });
+
+render();
+</script>
+</body>
+</html>

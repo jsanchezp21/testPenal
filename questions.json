@@ -1,0 +1,730 @@
+[
+  {
+    "id": 1,
+    "topic": "Régimen jurídico de las Administraciones Públicas",
+    "question": "2Respecto de la abstención y la recusación, señale la proposición CORRECTA:",
+    "options": {
+      "a": "La recusación puede plantearse verbalmente o por escrito, con indicación de la causa o causas en que se funda.",
+      "b": "La no abstención por parte de la autoridad o funcionario en quien concurra la causa determina la invalidez automática de los actos en que aquél participe.",
+      "c": "Concurre causa de abstención cuando se tiene parentesco de afinidad dentro del cuarto grado.",
+      "d": "Ambas figuras tienen como finalidad la actuación objetiva de los órganos de la administración."
+    },
+    "answer": "d",
+    "explanation": "Abstención y recusación son garantías de imparcialidad/objetividad en la actuación administrativa. La falta de abstención no invalida automáticamente y los grados/condiciones concretas de parentesco no se expresan como en la opción c."
+  },
+  {
+    "id": 2,
+    "topic": "Ordenamiento Jurídico Administrativo (IV)",
+    "question": "De las normas que se citan, señale aquélla cuyo control pueden llevarlo a cabo, en ciertos casos, los tribunales ordinarios:",
+    "options": {
+      "a": "Decretos legislativos.",
+      "b": "Leyes orgánicas.",
+      "c": "Leyes ordinarias.",
+      "d": "Decretos-leyes."
+    },
+    "answer": "a",
+    "explanation": "Los tribunales ordinarios pueden controlar si un decreto legislativo se ha excedido de la delegación (control de legalidad de la delegación). El control de constitucionalidad de las leyes y de los decretos-leyes corresponde al Tribunal Constitucional."
+  },
+  {
+    "id": 3,
+    "topic": "Ordenamiento Jurídico Administrativo (II)",
+    "question": "De las normas de Derecho Comunitario Europeo que se citan, señale aquélla que NO tiene carácter vinculante:",
+    "options": {
+      "a": "Los reglamentos.",
+      "b": "Las directivas.",
+      "c": "Los dictámenes.",
+      "d": "Las decisiones."
+    },
+    "answer": "c",
+    "explanation": "En el Derecho de la UE, reglamentos, directivas y decisiones son vinculantes (con distinto alcance). Recomendaciones y dictámenes no tienen fuerza vinculante."
+  },
+  {
+    "id": 4,
+    "topic": "Funcionamiento electrónico del sector público",
+    "question": "Transmisiones de datos entre administraciones públicas. ¿De qué plazo dispone la administración cedente para oponerse al uso ulterior de los datos facilitados a la cesionaria cuando ésta pretenda un tratamiento ulterior de los mismos?",
+    "options": {
+      "a": "Un mes.",
+      "b": "10 días.",
+      "c": "30 días.",
+      "d": "15 días."
+    },
+    "answer": "b",
+    "explanation": "El régimen de intercambio de datos entre AAPP prevé un plazo breve para oponerse a un tratamiento ulterior: 10 días."
+  },
+  {
+    "id": 5,
+    "topic": "Funcionamiento electrónico del Sector Público",
+    "question": "¿Qué sistema/s de firma electrónica puede/n utilizarse para el ejercicio de la competencia en la actuación administrativa automatizada?",
+    "options": {
+      "a": "Sello electrónico de administración pública basado en certificado electrónico reconocido o cualificado.",
+      "b": "Firma electrónica del titular del órgano que ejerza dicha competencia.",
+      "c": "Todas las opciones de respuesta son correctas.",
+      "d": "Firma electrónica del empleado público del órgano que ejerza dicha competencia."
+    },
+    "answer": "a",
+    "explanation": "En la actuación automatizada, la identificación/autenticación del órgano se realiza típicamente mediante sello electrónico (no con la firma personal del titular o del empleado)."
+  },
+  {
+    "id": 6,
+    "topic": "Responsabilidad patrimonial de las Administraciones Públicas",
+    "question": "Señale la proposición CORRECTA:",
+    "options": {
+      "a": "La Ley de Régimen Jurídico de la Administración Pública reconoce, en determinadas circunstancias, la responsabilidad de la Administración Pública por normas con rango de ley de naturaleza no expropiatoria.",
+      "b": "Todas las opciones de respuesta son correctas.",
+      "c": "La responsabilidad patrimonial de la administración es directa y subsidiaria.",
+      "d": "La responsabilidad por el funcionamiento anormal del Tribunal Constitucional se reconoce directamente en la Constitución."
+    },
+    "answer": "a",
+    "explanation": "Existe (con requisitos estrictos) responsabilidad patrimonial por normas con rango de ley (Estado legislador). No es subsidiaria; y no se reconoce “directamente” en la Constitución una responsabilidad específica por funcionamiento anormal del TC."
+  },
+  {
+    "id": 7,
+    "topic": "Ordenamiento Jurídico Administrativo (V)",
+    "question": "La forma en que de manera reiterada la administración ha venido aplicando una norma es lo que se denomina…",
+    "options": {
+      "a": "Costumbre.",
+      "b": "Jurisprudencia.",
+      "c": "Fuente.",
+      "d": "Precedente administrativo."
+    },
+    "answer": "d",
+    "explanation": "El precedente administrativo es el criterio reiterado con el que la Administración aplica una norma. No es costumbre (fuente del Derecho) ni jurisprudencia (tribunales)."
+  },
+  {
+    "id": 8,
+    "topic": "Responsabilidad patrimonial de las Administraciones Públicas",
+    "question": "Señale la proposición CORRECTA respecto del ejercicio de la acción de responsabilidad administrativa:",
+    "options": {
+      "a": "El procedimiento puede terminar mediante acuerdo indemnizatorio con el interesado en cualquier momento anterior a la resolución.",
+      "b": "Para la cuantificación de los daños se usan criterios de valoración, entre otros, los incluidos en los baremos de la normativa vigente en materia de seguros obligatorios y de la seguridad social.",
+      "c": "La resolución del Ministro no pone fin a la vía administrativa.",
+      "d": "En el ámbito de la Administración General del Estado es competente para resolver el Ministro que dispone de un plazo de tres meses para notificar la misma, teniendo el silencio administrativo efectos desestimatorios."
+    },
+    "answer": "c",
+    "explanation": "En el ámbito estatal, la resolución del Ministro en este procedimiento no agota por sí misma la vía administrativa (cabe recurso). La opción d falla por el plazo indicado; y a/b no reflejan correctamente el régimen general."
+  },
+  {
+    "id": 9,
+    "topic": "Actuación y funcionamiento del sector público por medios electrónicos",
+    "question": "¿En qué lugar se encuentra alojada la Dirección Electrónica Habilitada Única?",
+    "options": {
+      "a": "Ninguna opción de respuesta es correcta.",
+      "b": "En el portal del Punto de Acceso General electrónico de la Administración General del Estado.",
+      "c": "En la sede electrónica del Punto de Acceso General electrónico de la Administración General del Estado.",
+      "d": "En la sede electrónica del Ministerio de Hacienda."
+    },
+    "answer": "c",
+    "explanation": "La DEHú se integra en la sede electrónica del Punto de Acceso General (PAGe) de la Administración General del Estado."
+  },
+  {
+    "id": 10,
+    "topic": "Ordenamiento Jurídico Administrativo (V)",
+    "question": "En lo que se refiere a las relaciones entre ley y reglamento, señale la opción de respuesta INCORRECTA:",
+    "options": {
+      "a": "Los reglamentos que desarrollan una ley no pueden entrar en contradicción con ella.",
+      "b": "Los reglamentos independientes sólo pueden dictarse respecto de materias en que no existe reserva de ley.",
+      "c": "Los reglamentos ejecutivos desarrollan las disposiciones de una ley, generalmente porque ésta así lo establece.",
+      "d": "Las relaciones entre una ley y un reglamento pertenecientes a distintos ordenamientos se rigen por el principio de jerarquía, prevaleciendo por tanto la primera."
+    },
+    "answer": "d",
+    "explanation": "Cuando la ley y el reglamento pertenecen a distintos ordenamientos (p.ej., Estado/CCAA), la regla principal no es la jerarquía sino la competencia. Por eso la d es la incorrecta."
+  },
+  {
+    "id": 11,
+    "topic": "Actuación y funcionamiento del sector público por medios electrónicos",
+    "question": "El conjunto de principios y técnicas que deben respetar al diseñar los servicios electrónicos para garantizar la igualdad y la no discriminación en el acceso de las personas usuarias se corresponde con uno de los principios que debe respetar el sector público en sus relaciones y actuaciones electrónicas, ¿con cuál?",
+    "options": {
+      "a": "Proporcionalidad.",
+      "b": "Neutralidad tecnológica.",
+      "c": "Accesibilidad.",
+      "d": "Interoperabilidad."
+    },
+    "answer": "c",
+    "explanation": "Garantizar igualdad y no discriminación en el acceso a servicios electrónicos es precisamente el principio de accesibilidad."
+  },
+  {
+    "id": 12,
+    "topic": "Examen 2023 (Administrativo)",
+    "question": "Poder Ejecutivo y Administración Pública. Conforme al manual de la asignatura y aplicado al sistema español, el aparato organizativo puesto a las órdenes del poder ejecutivo y dispuesto para la satisfacción de los intereses públicos constitucionalmente definidos es lo que se denomina....",
+    "options": {
+      "a": "Gobierno.",
+      "b": "Administración pública.",
+      "c": "Estado.",
+      "d": "División de poderes."
+    },
+    "answer": "b",
+    "explanation": "Se denomina Administración Pública al aparato organizativo puesto al servicio del poder ejecutivo para la satisfacción de los intereses generales. El Gobierno la dirige, pero no se identifica con ella."
+  },
+  {
+    "id": 13,
+    "topic": "Examen 2023 (Administrativo)",
+    "question": "Derecho Comunitario Europeo. Normas escritas. ¿Qué normas del derecho comunitario no son de aplicación directa pero obligan a los Estados miembros en cuanto al logro del resultado que las mismas pretendan?",
+    "options": {
+      "a": "Recomendaciones.",
+      "b": "Dictámenes.",
+      "c": "Directivas.",
+      "d": "Reglamentos."
+    },
+    "answer": "c",
+    "explanation": "Las directivas obligan al Estado miembro en cuanto al resultado a conseguir, dejando libertad sobre forma y medios. Reglamentos y decisiones son vinculantes; recomendaciones/dictámenes no lo son."
+  },
+  {
+    "id": 14,
+    "topic": "Examen 2023 (Administrativo)",
+    "question": "Clases de leyes estatales. En relación con las normas con valor de ley señale la respuesta INCORRECTA:",
+    "options": {
+      "a": "Las leyes de bases forman parte de la técnica de delegación legislativa de las Cortes Generales en el Gobierno.",
+      "b": "Los Presupuestos Generales del Estado solo pueden ser presentados por el Gobierno como proyecto de ley.",
+      "c": "Los Estatutos de Autonomía, aprobados por ley ordinaria, constituyen la primera norma del ordenamiento autonómico.",
+      "d": "El ejercicio de la iniciativa legislativa popular debe de regularse mediante ley orgánica."
+    },
+    "answer": "c",
+    "explanation": "Es incorrecto que los Estatutos de Autonomía se aprueben por ley ordinaria: se aprueban mediante ley orgánica."
+  },
+  {
+    "id": 15,
+    "topic": "Examen 2023 (Administrativo)",
+    "question": "Ordenamiento Jurídico Administrativo III. Leyes estatales y autonómicas y normas con rango de ley. De las normas que se citan, señale aquella que formalmente tiene el carácter de ley orgánica:",
+    "options": {
+      "a": "Leyes de presupuestos.",
+      "b": "Leyes de armonización.",
+      "c": "Leyes marco.",
+      "d": "Leyes de transferencia o delegación."
+    },
+    "answer": "d",
+    "explanation": "Las leyes de transferencia o delegación (art. 150.2 CE) se aprueban mediante ley orgánica. Las leyes marco (150.1) y las de presupuestos no lo son; las de armonización exigen mayoría reforzada, pero no se califican formalmente como orgánicas."
+  },
+  {
+    "id": 16,
+    "topic": "Examen 2023 (Administrativo)",
+    "question": "Relaciones entre ley y reglamentos. Las relaciones interordinamentales entre una ley estatal y un reglamento de un ordenamiento autonómico, en caso de conflicto, ¿cómo se resuelven con carácter general?",
+    "options": {
+      "a": "Conforme al principio de competencia.",
+      "b": "De acuerdo con el principio de jerarquía.",
+      "c": "A través del principio de coordinación.",
+      "d": "Mediante el principio de primacía."
+    },
+    "answer": "a",
+    "explanation": "Entre distintos ordenamientos (Estado–CCAA) no rige jerarquía, sino el principio de competencia: prevalece la norma dictada por el ente competente."
+  },
+  {
+    "id": 17,
+    "topic": "Examen 2023 (Administrativo)",
+    "question": "Régimen jurídico de las Administraciones Públicas: Disposiciones Generales y órganos. La competencia. De las figuras que se citan en las diferentes opciones de respuesta, señale aquella en la que se cede la titularidad de la competencia.",
+    "options": {
+      "a": "Delegación de competencias.",
+      "b": "Avocación.",
+      "c": "Desconcentración.",
+      "d": "Delegación de firma."
+    },
+    "answer": "c",
+    "explanation": "La desconcentración supone un traspaso de la titularidad de la competencia entre órganos de la misma Administración. En la delegación se cede el ejercicio, no la titularidad."
+  },
+  {
+    "id": 18,
+    "topic": "Examen 2023 (Administrativo)",
+    "question": "El ejercicio de la competencia. En relación con la competencia y su ejercicio por parte de las diferentes Administraciones Públicas, señala la respuesta CORRECTA:",
+    "options": {
+      "a": "La avocación se hará siempre mediante acuerdo motivado y contra el acuerdo de avocación cabrá recurso independiente del que se pueda interponerse contra la resolución final del procedimiento.",
+      "b": "La delegación de firma altera la competencia del órgano delegante y para su validez será necesaria su publicación.",
+      "c": "Podrá ser objeto de delegación la competencia relativa a la adopción de disposiciones de carácter general.",
+      "d": "La encomienda de gestión no supone cesión de la titularidad de la competencia ni de los elementos sustantivos de su ejercicio."
+    },
+    "answer": "d",
+    "explanation": "La encomienda de gestión implica encargar actividades materiales/técnicas, sin cesión de titularidad ni de los elementos sustantivos del ejercicio de la competencia."
+  },
+  {
+    "id": 19,
+    "topic": "Examen 2023 (Administrativo)",
+    "question": "Administración General del Estado. Funciones de los órganos superiores y directivos de los ministerios. El establecer los programas de inspección y proponer las medidas de organización del Ministerio es una competencia que corresponde...",
+    "options": {
+      "a": "A los Secretarios de Estado.",
+      "b": "A los Subsecretarios.",
+      "c": "A los secretarios generales.",
+      "d": "No se trata de una competencia atribuida expresamente a ninguno de los citados en los apartados anteriores."
+    },
+    "answer": "b",
+    "explanation": "En la organización ministerial, el Subsecretario dirige los servicios comunes y, entre otras funciones, impulsa la inspección de servicios y propone medidas de organización del Departamento."
+  },
+  {
+    "id": 20,
+    "topic": "Examen 2023 (Administrativo)",
+    "question": "El Sector Público Institucional. ¿Cómo se clasifican los organismos públicos vinculados o dependientes de la Administración General del Estado?",
+    "options": {
+      "a": "Organismos autónomos, agencias estatales y entidades públicas empresariales.",
+      "b": "Consorcios, autoridades administrativas independientes y entidades públicas empresariales.",
+      "c": "Sociedades mercantiles estatales, organismos autónomos y agencias estatales.",
+      "d": "Universidades sin personalidad jurídica, consorcios y sociedades mercantiles estatales."
+    },
+    "answer": "a",
+    "explanation": "En la clasificación tradicional del sector público institucional estatal, los organismos públicos se agrupan en organismos autónomos, entidades públicas empresariales y agencias estatales (según el temario/estructura estudiada)."
+  },
+  {
+    "id": 21,
+    "topic": "Examen 2023 (Administrativo)",
+    "question": "Responsabilidad patrimonial de las Administraciones Públicas. Requisitos de la responsabilidad administrativa. Conforme al manual de la asignatura, NO constituye uno de tales requisitos:",
+    "options": {
+      "a": "Que el daño o lesión producida sea consecuencia del funcionamiento normal o anormal de los servicios públicos.",
+      "b": "Que el daño o lesión sea potencial, evaluable económicamente e individualizado o individualizable.",
+      "c": "Que exista una relación de causalidad entre la actividad o inactividad de la Administración y la lesión producida.",
+      "d": "Que la lesión ocasionada sea antijurídica en el sentido de que el particular no tenga el deber jurídico de soportarla."
+    },
+    "answer": "b",
+    "explanation": "El daño debe ser efectivo/real (no meramente potencial), además de evaluable económicamente e individualizado. Por eso la opción b es la incorrecta."
+  },
+  {
+    "id": 22,
+    "topic": "Examen 2023 (Administrativo)",
+    "question": "Responsabilidad patrimonial de las Administraciones Públicas. Ejercicio de la acción de responsabilidad administrativa. Señale la proposición CORRECTA:",
+    "options": {
+      "a": "Salvo disposición contraria de una ley, en el ámbito de la Administración Autonómica es competente para resolver el procedimiento de responsabilidad patrimonial el Consejero competente por razón de la materia.",
+      "b": "El plazo para ejercer la acción en caso de daños de carácter físico o psíquico a las personas se cuenta a partir de su curación o la determinación del alcance de las secuelas.",
+      "c": "El procedimiento de responsabilidad patrimonial puede iniciarse de oficio o a instancia del interesado.",
+      "d": "Todas las opciones de respuesta son correctas."
+    },
+    "answer": "d",
+    "explanation": "a), b) y c) son correctas: el procedimiento puede iniciarse de oficio o a instancia; en daños físicos/psíquicos el plazo cuenta desde curación o determinación de secuelas; y la competencia en CCAA se atribuye a sus órganos (según su organización/norma aplicable)."
+  },
+  {
+    "id": 23,
+    "topic": "Examen 2023 (Administrativo)",
+    "question": "Funcionamiento electrónico del sector público y relaciones electrónicas entre administraciones. Conforme al manual de la asignatura, cuando se habla \"del punto de acceso electrónico cuya titularidad corresponde a una administración publica, organismo público o entidad de derecho público que permite el acceso a través de internet a la información publicada\" nos estamos refiriendo a:",
+    "options": {
+      "a": "Dirección electrónica habilitada única.",
+      "b": "Portal de Internet.",
+      "c": "Sede electrónica.",
+      "d": "Carpeta ciudadana."
+    },
+    "answer": "b",
+    "explanation": "El 'portal de internet' es el punto de acceso a la información publicada por una Administración. La sede electrónica se centra en trámites/servicios con identificación y seguridad."
+  },
+  {
+    "id": 24,
+    "topic": "Examen 2023 (Administrativo)",
+    "question": "Funcionamiento electrónico del Sector Público y relaciones electrónicas entre administraciones. ¿Cómo se denomina cualquier acto realizado íntegramente a través de medios electrónicos por una Administración pública en el marco de un procedimiento administrativo y en el que no haya intervenido de forma directa un empleado público?",
+    "options": {
+      "a": "Punto de acceso general electrónico.",
+      "b": "Sede electrónica.",
+      "c": "Actuación administrativa automatizada.",
+      "d": "Esquema nacional de interoperabilidad."
+    },
+    "answer": "c",
+    "explanation": "Se trata de una actuación administrativa automatizada: acto producido íntegramente por medios electrónicos sin intervención directa de un empleado público."
+  },
+  {
+    "id": 25,
+    "topic": "Examen 2023 (Administrativo)",
+    "question": "Actuación y funcionamiento del sector público por medios electrónicos. El sector público debe respetar una serie de principios en sus actuaciones y relaciones electrónicas, señale aquél que, conforme al manual de la asignatura, NO se corresponde con uno de tales principios:",
+    "options": {
+      "a": "De personalización y proactividad.",
+      "b": "De interoperabilidad.",
+      "c": "De alternatividad.",
+      "d": "De adaptabilidad."
+    },
+    "answer": "c",
+    "explanation": "'Alternatividad' no figura como principio general de actuación por medios electrónicos en el temario habitual; sí lo hacen interoperabilidad, adaptabilidad y personalización/proactividad (según manual)."
+  },
+  {
+    "id": 26,
+    "topic": "Examen 2023 (Administrativo)",
+    "question": "Actuación y funcionamiento del Sector Público por medios electrónicos. ¿Qué funciones puede ofrecer la Carpeta Ciudadana?",
+    "options": {
+      "a": "Conocer qué datos suyos obran en poder del sector público estatal.",
+      "b": "Permitir el acceso a sus comunicaciones y notificaciones.",
+      "c": "Facilitar la obtención de certificaciones administrativas exigidas por la normativa correspondiente.",
+      "d": "Todas las respuestas son correctas."
+    },
+    "answer": "d",
+    "explanation": "La Carpeta Ciudadana integra varias funcionalidades: consulta de datos, acceso a notificaciones/comunicaciones y obtención de certificados, por lo que son correctas todas."
+  },
+  {
+    "id": 27,
+    "topic": "Examen 2023 (Administrativo)",
+    "question": "Actividad de las Administraciones Públicas. De las que se citan, señale aquella persona que NO está obligada a relacionarse electrónicamente con las Administraciones Públicas:",
+    "options": {
+      "a": "Los empleados de las Administraciones Públicas para todos los trámites y actuaciones que realicen con ellas.",
+      "b": "Las entidades sin personalidad jurídica.",
+      "c": "Los registradores de la propiedad.",
+      "d": "Los que ejerzan una actividad profesional para la que se requiera colegiación obligatoria."
+    },
+    "answer": "a",
+    "explanation": "Según el art. 14.2 LPACAP, están obligados a relacionarse electrónicamente, entre otros, las entidades sin personalidad jurídica y los profesionales con colegiación obligatoria (cuando actúan en el ejercicio de su actividad). La opción A es la única que no encaja, porque no es correcto afirmar que los empleados públicos estén obligados 'para todos los trámites' sin matices: la obligación se vincula a su actuación en condición de empleado público y en los términos previstos."
+  },
+  {
+    "id": 28,
+    "topic": "Examen 2023 (Administrativo)",
+    "question": "Actividad de las Administraciones Públicas. De los supuestos que seguidamente se citan, ¿en cuál se mantienen la obligación de resolver de la Administración?",
+    "options": {
+      "a": "Cuando se haya desistido de la solicitud.",
+      "b": "Cuando se trate de un procedimiento sometido al deber de declaración responsable.",
+      "c": "Cuando se termine el procedimiento por pacto o convenio.",
+      "d": "Cuando se trate de un procedimiento sometido al deber de comunicación."
+    },
+    "answer": "a",
+    "explanation": "La obligación de resolver se exceptúa, entre otros, en los procedimientos sometidos únicamente a declaración responsable o comunicación, y en la terminación por pacto o convenio. En caso de desistimiento, la Administración dicta resolución declarando el desistimiento."
+  },
+  {
+    "id": 29,
+    "topic": "Examen 2023 (Administrativo)",
+    "question": "Actividad de las Administraciones Públicas. Respecto del silencio administrativo, señale la proposición CORRECTA",
+    "options": {
+      "a": "En procedimientos iniciados de oficio que pudieran producir situaciones jurídicas favorables a los interesados que hubieren comparecido, el silencio tendrá efectos desestimatorios.",
+      "b": "En procedimientos de responsabilidad patrimonial iniciados a solicitud del interesado, el silencio tendrá efectos desestimatorios.",
+      "c": "En procedimientos iniciados de oficio susceptibles de producir efectos desfavorables o de gravamen, la no resolución y notificación en el plazo de tramitación del procedimiento, producirá la caducidad de este.",
+      "d": "Todas las opciones son correctas"
+    },
+    "answer": "d",
+    "explanation": "Son correctas: (a) en procedimientos de oficio favorables, los comparecidos pueden entender desestimadas sus pretensiones; (b) en responsabilidad patrimonial a instancia, el silencio es desestimatorio; (c) en procedimientos de oficio desfavorables (p. ej., sancionadores), procede la caducidad."
+  },
+  {
+    "id": 30,
+    "topic": "Examen 2023 (Administrativo)",
+    "question": "Actos administrativos. Nulidad y anulabilidad de los actos administrativos. ¿En qué casos de los siguientes serán anulables los actos administrativos?",
+    "options": {
+      "a": "Los dictados prescindiendo total y absolutamente del procedimiento legalmente establecido.",
+      "b": "Los dictados por órgano manifiestamente incompetente por razón de la materia.",
+      "c": "Los actos que carezcan de los requisitos de forma indispensables para alcanzar su fin.",
+      "d": "Son anulables todos los actos dictados en cualquiera de las condiciones citadas en las respuestas anteriores."
+    },
+    "answer": "c",
+    "explanation": "La falta de requisitos de forma indispensables para alcanzar su fin suele determinar anulabilidad. Prescindir total y absolutamente del procedimiento o incompetencia manifiesta por materia son causas de nulidad de pleno derecho."
+  },
+  {
+    "id": 31,
+    "topic": "Examen 2023 (Administrativo)",
+    "question": "Concepto de expediente administrativo. ¿Cuál de los siguientes elementos NO forma parte de un expediente administrativo?",
+    "options": {
+      "a": "Las pruebas realizadas durante el procedimiento.",
+      "b": "Notas con Información de apoyo.",
+      "c": "Las notificaciones llevadas a cabo.",
+      "d": "El Índice numerado cuando se remita el expediente."
+    },
+    "answer": "b",
+    "explanation": "No forman parte del expediente las notas, borradores u opiniones internas de apoyo. Sí forman parte las actuaciones y documentos del procedimiento, y el índice cuando se remite."
+  },
+  {
+    "id": 32,
+    "topic": "Examen 2023 (Administrativo)",
+    "question": "Procedimiento Administrativo. Tramitación simplificada. Señale la proposición CORRECTA:",
+    "options": {
+      "a": "Puede acordarse de oficio o a solicitud de los interesados.",
+      "b": "Para su adopción es preciso que lo aconsejen razones de interés público.",
+      "c": "Puede adoptarse si lo aconseja la falta de complejidad del procedimiento.",
+      "d": "Todas las opciones son correctas."
+    },
+    "answer": "d",
+    "explanation": "La tramitación simplificada puede acordarse de oficio o a solicitud cuando razones de interés público o la falta de complejidad lo aconsejen. Por tanto, todas son correctas."
+  },
+  {
+    "id": 33,
+    "topic": "Examen 2023 (Administrativo)",
+    "question": "Revisión de actos en vía administrativa. Con respecto a la declaración de lesividad de los actos anulables, señale la proposición CORRECTA.",
+    "options": {
+      "a": "De los actos que provengan de la Administración local, la declaración de lesividad se adoptará por la correspondiente Diputación Provincial, previo informe del Delegado o Subdelegado del Gobierno, en su caso.",
+      "b": "Las Administraciones Públicas podrán Impugnar ante el orden contencioso administrativo los actos favorables para los interesados que sean anulables, previa declaración de lesividad.",
+      "c": "Transcurrido el plazo de seis meses desde la iniciación del procedimiento sin haberse declarado la lesividad, se producirá la prescripción del mismo.",
+      "d": "La declaración de lesividad podrá adoptarse en cualquier momento siempre y cuando se cumpla el trámite de audiencia a los interesados en el mismo y no será susceptible de recurso."
+    },
+    "answer": "b",
+    "explanation": "La Administración puede impugnar en vía contenciosa actos favorables anulables previa declaración de lesividad. El órgano competente no es una Diputación por regla general y el plazo produce caducidad, no 'prescripción'."
+  },
+  {
+    "id": 34,
+    "topic": "Examen 2023 (Administrativo)",
+    "question": "Recursos administrativos. ¿En cuál de los siguientes casos de actos firmes en vía administrativa NO podrá interponerse recurso extraordinario de revisión?",
+    "options": {
+      "a": "Cuando se hayan dictado prescindiendo total y absolutamente de las normas que contienen las reglas esenciales para la formación de la voluntad de los órganos colegiados.",
+      "b": "Si aparecen documentos anteriores de valor esencial para la resolución del asunto, que evidencien el error de la resolución recurrida.",
+      "c": "En los casos en que en la resolución hayan influido esencialmente documentos declarados falsos por sentencia judicial firme anterior a aquella resolución.",
+      "d": "Cuando en la resolución hayan influido esencialmente testimonios declarados falsos por sentencia judicial firme posterior a dicha resolución."
+    },
+    "answer": "a",
+    "explanation": "El recurso extraordinario de revisión solo procede por las causas tasadas (aparición de documentos esenciales, falsedad de documentos/testimonios, etc.). La infracción de reglas esenciales de órganos colegiados es una causa típica de nulidad, no un supuesto del recurso extraordinario de revisión."
+  },
+  {
+    "id": 35,
+    "topic": "Examen 2023 (Administrativo)",
+    "question": "Procedimientos administrativo por medios electrónicos. ¿Cómo se practicarán las notificaciones por medios electrónicos?",
+    "options": {
+      "a": "Mediante comparecencia en la Sede Electrónica.",
+      "b": "Mediante comparecencia en la Sede Electrónica Asociada de la Administración.",
+      "c": "A través de la Dirección Electrónica Habilitada Única.",
+      "d": "Todas las opciones son correctas."
+    },
+    "answer": "d",
+    "explanation": "Las notificaciones electrónicas se practican mediante comparecencia en la sede (o sede asociada) y también a través de la Dirección Electrónica Habilitada Única (DEHú). Por eso, todas son correctas."
+  },
+  {
+    "id": 36,
+    "topic": "Examen 2023 (Administrativo)",
+    "question": "El procedimiento contencioso administrativo abreviado. En el acto de la vista, ¿cuál será el acuerdo del juez o tribunal si, declarada abierta la vista, no comparecieren las partes?",
+    "options": {
+      "a": "Citará de nuevo a las partes.",
+      "b": "Tendrá al demandado por desistido del recurso.",
+      "c": "Tendrá al actor por desistido del recurso.",
+      "d": "Tendrá por desistidos tanto al actor como al demandado."
+    },
+    "answer": "c",
+    "explanation": "En el abreviado, si no comparece el actor (y más aún si no comparece nadie), se le tiene por desistido del recurso. La incomparecencia del demandado no implica desistimiento, sino que puede seguir la vista."
+  },
+  {
+    "topic": "Parcial II (Administrativo)",
+    "question": "La Administración Pública no requerirá de los interesados el uso obligatorio de firma para:",
+    "options": {
+      "a": "Presentar declaraciones responsables",
+      "b": "Desistir de acciones",
+      "c": "Interponer recursos",
+      "d": "Formular alegaciones"
+    },
+    "answer": "d",
+    "explanation": "Conforme a la LPACAP, la firma puede exigirse para solicitudes, declaraciones responsables/comunicaciones, recursos y desistimientos. Las alegaciones, por regla general, no requieren firma obligatoria.",
+    "id": 37
+  },
+  {
+    "topic": "Parcial II (Administrativo)",
+    "question": "¿Quién está obligado a relacionarse electrónicamente con la Administración Pública?",
+    "options": {
+      "a": "Quienes representen a un interesado no obligado",
+      "b": "Los notarios para cualquier trámite frente a la Administración",
+      "c": "Los empleados de las Administraciones Públicas para cualquier trámite",
+      "d": "Quienes ejerzan una actividad profesional para la que se requiera colegiación obligatoria, para los trámites y actuaciones que realicen en el ejercicio de dicha actividad"
+    },
+    "answer": "d",
+    "explanation": "El art. 14.2 LPACAP obliga, entre otros, a quienes ejerzan una actividad profesional con colegiación obligatoria (en el ejercicio de dicha actividad) a relacionarse electrónicamente.",
+    "id": 38
+  },
+  {
+    "topic": "Parcial II (Administrativo)",
+    "question": "Señale el supuesto en el que la Administración no está obligada a dictar resolución expresa ni a notificarla:",
+    "options": {
+      "a": "Renuncia al derecho",
+      "b": "Desistimiento",
+      "c": "Desaparición sobrevenida del objeto del recurso",
+      "d": "Terminación del procedimiento por pacto o convenio"
+    },
+    "answer": "d",
+    "explanation": "Con carácter general existe deber de resolver y notificar. Se exceptúa, entre otros supuestos, la terminación del procedimiento por pacto o convenio (LPACAP, art. 21).",
+    "id": 39
+  },
+  {
+    "topic": "Parcial II (Administrativo)",
+    "question": "Respecto al silencio administrativo en procedimientos iniciados a solicitud del interesado obligado a relacionarse electrónicamente con la Administración, señale la correcta:",
+    "options": {
+      "a": "La puesta a disposición del interesado del texto íntegro de la resolución en sede electrónica dentro del plazo para resolver impide que se produzca el silencio administrativo, aunque no se haya accedido a la notificación.",
+      "b": "El silencio tiene efectos desestimatorios si así lo dispone una norma con rango legal o reglamentario",
+      "c": "En procedimientos de impugnación de actos, el silencio administrativo tiene siempre efectos desestimatorios.",
+      "d": "La producción del silencio administrativo exime a la Administración de la obligación de resolver."
+    },
+    "answer": "a",
+    "explanation": "A efectos de cumplir el plazo máximo de notificación, basta la puesta a disposición de la notificación en la sede electrónica dentro de plazo; así se evita la producción del silencio, aunque el interesado no acceda (LPACAP).",
+    "id": 40
+  },
+  {
+    "topic": "Parcial II (Administrativo)",
+    "question": "No constituye un elemento reglado de los actos administrativos:",
+    "options": {
+      "a": "La competencia",
+      "b": "El procedimiento para elaborar y aprobar el acto",
+      "c": "El fin",
+      "d": "El modo de actuar para cumplimentar el acto"
+    },
+    "answer": "d",
+    "explanation": "Competencia, procedimiento y fin son elementos reglados. El modo de actuar puede dejar margen de apreciación (discrecionalidad) en ciertos casos.",
+    "id": 41
+  },
+  {
+    "topic": "Parcial II (Administrativo)",
+    "question": "¿Cuál es el contenido mínimo de una notificación para que quede cumplida la voluntad de resolver?",
+    "options": {
+      "a": "El texto íntegro de la resolución",
+      "b": "El pie de recursos",
+      "c": "El órgano competente",
+      "d": "La firma del interesado"
+    },
+    "answer": "a",
+    "explanation": "La notificación debe contener, como mínimo, el texto íntegro del acto/resolución. El pie de recursos es exigible para una notificación completa, pero el núcleo es el texto íntegro.",
+    "id": 42
+  },
+  {
+    "topic": "Parcial II (Administrativo)",
+    "question": "No es nulo de pleno derecho el acto por el que:",
+    "options": {
+      "a": "Se adjudica un contrato público a una persona física fallecida",
+      "b": "Se adquiere un derecho careciendo de algún requisito esencial",
+      "c": "Se vulnera la libertad ideológica",
+      "d": "Se nombra a un funcionario para un puesto inexistente"
+    },
+    "answer": "b",
+    "explanation": "la a es nula de pleno derecho por contenido imposible. Tiene que carecer de todos, no de algunos",
+    "id": 43
+  },
+  {
+    "topic": "Parcial II (Administrativo)",
+    "question": "La adopción de medidas provisionales exige la existencia de elementos de juicio suficientes y el respeto a determinados principios. Señale el que no corresponde:",
+    "options": {
+      "a": "Proporcionalidad",
+      "b": "Eficacia presupuestaria",
+      "c": "Menor onerosidad",
+      "d": "Efectividad"
+    },
+    "answer": "b",
+    "explanation": "Entre los principios a respetar se encuentran proporcionalidad, menor onerosidad y efectividad/adecuación. 'Eficacia presupuestaria' no forma parte de ese elenco.",
+    "id": 44
+  },
+  {
+    "topic": "Parcial II (Administrativo)",
+    "question": "Especialidades en el inicio de los procedimientos sancionadores:",
+    "options": {
+      "a": "Siempre se inician de oficio y debe existir separación entre fase instructora y sancionadora",
+      "b": "El acuerdo de inicio debe contener el posible reconocimiento de responsabilidad y sus efectos",
+      "c": "El pliego de cargos tiene carácter excepcional",
+      "d": "Todas son correctas"
+    },
+    "answer": "d",
+    "explanation": "En el régimen sancionador, se inicia de oficio, debe garantizarse separación de funciones, el acuerdo de inicio incorpora información relevante (incluido reconocimiento), y el pliego de cargos no es la regla general en LPACAP (por eso se considera excepcional en el temario).",
+    "id": 45
+  },
+  {
+    "topic": "Parcial II (Administrativo)",
+    "question": "Respecto a la instrucción del procedimiento, señale la proposición correcta:",
+    "options": {
+      "a": "Los interesados podrán alegar los defectos de tramitación después del trámite de audiencia",
+      "b": "El trámite de audiencia tendrá lugar inmediatamente después de la resolución",
+      "c": "Si la prueba propuesta es manifiestamente improcedente debe anularse el procedimiento",
+      "d": "Todas son correctas"
+    },
+    "answer": "a",
+    "explanation": "Los defectos de tramitación pueden alegarse en cualquier momento antes de la resolución. La audiencia es previa a la propuesta de resolución, y la prueba improcedente se inadmite motivadamente sin anular todo el procedimiento.",
+    "id": 46
+  },
+  {
+    "topic": "Parcial II (Administrativo)",
+    "question": "Respecto a la resolución, señale la incorrecta:",
+    "options": {
+      "a": "Las actuaciones complementarias han de practicarse en un plazo de 7 días y se dará un plazo de 15 días para alegaciones",
+      "b": "La resolución debe ser congruente con las peticiones formuladas",
+      "c": "Debe decidir todas las cuestiones planteadas",
+      "d": "Debe ser motivada cuando así lo exija la ley"
+    },
+    "answer": "a",
+    "explanation": "Los plazos indicados para actuaciones complementarias y alegaciones no son esos (están invertidos/incorrectos según LPACAP). Las demás afirmaciones responden a reglas generales de la resolución.",
+    "id": 47
+  },
+  {
+    "topic": "Parcial II (Administrativo)",
+    "question": "Los actos de las Administraciones Públicas sujetos a Derecho Administrativo serán inmediatamente ejecutivos salvo que:",
+    "options": {
+      "a": "Se produzca la suspensión",
+      "b": "Una disposición establezca lo contrario",
+      "c": "Se necesite aprobación o autorización superior",
+      "d": "Se trate de una resolución de cualquier naturaleza contra la que quepa la vía administrativa"
+    },
+    "answer": "c",
+    "explanation": "Una de las excepciones típicas a la ejecutividad inmediata es cuando el acto necesite aprobación o autorización superior. (También puede operar la suspensión o una disposición en contrario, pero en test suele buscarse una excepción expresa como la de la opción c).",
+    "id": 48
+  },
+  {
+    "topic": "Parcial II (Administrativo)",
+    "question": "En materia de revisión de oficio, señale la correcta:",
+    "options": {
+      "a": "La revisión de oficio puede acordarse respecto de actos nulos y anulables",
+      "b": "La declaración de lesividad se refiere únicamente a actos desfavorables",
+      "c": "La revocación de actos solo puede acordarse respecto de actos desfavorables o de gravamen",
+      "d": "Todas son correctas"
+    },
+    "answer": "c",
+    "explanation": "La revocación (LPACAP) se limita a actos desfavorables o de gravamen. La revisión de oficio se proyecta sobre actos nulos (no anulables), y la lesividad se refiere a actos favorables.",
+    "id": 49
+  },
+  {
+    "topic": "Parcial II (Administrativo)",
+    "question": "De los procedimientos de revisión que se citan, señale cuál requiere dictamen previo del Consejo de Estado:",
+    "options": {
+      "a": "Declaración de lesividad",
+      "b": "Revocación de actos",
+      "c": "Todas son correctas",
+      "d": "Recurso extraordinario de revisión"
+    },
+    "answer": "a",
+    "explanation": "En el esquema del temario, el dictamen preceptivo del Consejo de Estado se asocia a los procedimientos de revisión 'más intensos'. En la LPACAP, el dictamen es característico de la revisión de oficio de actos nulos (no listada aquí). Si tu cuadro de la plataforma asigna esta exigencia a una opción concreta, se corresponde con la a) en tu material.",
+    "id": 50
+  },
+  {
+    "topic": "Parcial II (Administrativo)",
+    "question": "¿Por qué medio puede atacarse directamente una disposición de carácter general en vía administrativa?",
+    "options": {
+      "a": "Revisión de oficio",
+      "b": "Declaración de lesividad",
+      "c": "Recurso extraordinario de revisión",
+      "d": "Recurso de alzada"
+    },
+    "answer": "a",
+    "explanation": "Las disposiciones generales no se atacan por alzada ni por recurso extraordinario de revisión; pueden impugnarse directamente mediante revisión de oficio (nulidad).",
+    "id": 51
+  },
+  {
+    "topic": "Parcial II (Administrativo)",
+    "question": "Respecto a las notificaciones electrónicas, señale la correcta:",
+    "options": {
+      "a": "La puesta a disposición de la notificación en sede electrónica supone que se cumple la obligación de resolver y notificar en plazo e impide que se produzcan los efectos del silencio administrativo",
+      "b": "— (no aparece en el PDF)",
+      "c": "— (no aparece en el PDF)",
+      "d": "— (no aparece en el PDF)"
+    },
+    "answer": "a",
+    "explanation": "A los solos efectos de entender cumplida la obligación de notificar en plazo, basta la puesta a disposición de la notificación electrónica dentro del plazo máximo (LPACAP).",
+    "id": 52
+  },
+  {
+    "topic": "Parcial II (Administrativo)",
+    "question": "¿Cómo se llevará a cabo el foliado de los expedientes administrativos electrónicos?",
+    "options": {
+      "a": "Mediante firma electrónica",
+      "b": "Mediante sello de tiempo",
+      "c": "Mediante índice electrónico autenticado",
+      "d": "Mediante sello electrónico no cualificado"
+    },
+    "answer": "c",
+    "explanation": "El expediente electrónico incorpora un índice electrónico, autenticado, que garantiza integridad y orden/foliado del expediente.",
+    "id": 53
+  },
+  {
+    "topic": "Parcial II (Administrativo)",
+    "question": "No se encuentra dentro de la actividad administrativa impugnable en el procedimiento contencioso-administrativo:",
+    "options": {
+      "a": "Los reglamentos",
+      "b": "Las actuaciones materiales que constituyan vía de hecho",
+      "c": "La inactividad",
+      "d": "Los delitos leves"
+    },
+    "answer": "d",
+    "explanation": "En la LJCA son impugnables disposiciones, actos, inactividad y vía de hecho. Los delitos leves pertenecen al orden penal, no al contencioso-administrativo.",
+    "id": 54
+  },
+  {
+    "topic": "Parcial II (Administrativo)",
+    "question": "¿Qué mecanismo puede utilizar el juez o tribunal en caso de incumplimiento del fallo de una sentencia en el orden contencioso-administrativo?",
+    "options": {
+      "a": "La compulsión sobre las personas",
+      "b": "La multa coercitiva de 100 a 500 euros",
+      "c": "La intimación a la Administración",
+      "d": "La deducción de testimonio para exigir responsabilidades ante otros órdenes jurisdiccionales"
+    },
+    "answer": "d",
+    "explanation": "Además de requerimientos, el órgano judicial puede deducir testimonio para exigir responsabilidades en otros órdenes. La cuantía concreta de la multa coercitiva indicada en b) no coincide con el régimen habitual, por eso se elige d).",
+    "id": 55
+  },
+  {
+    "topic": "Parcial II (Administrativo)",
+    "question": "¿En qué plazo deben interponer los organizadores el recurso contencioso-administrativo en materia de derecho de reunión?",
+    "options": {
+      "a": "48 horas",
+      "b": "— (no aparece en el PDF)",
+      "c": "— (no aparece en el PDF)",
+      "d": "— (no aparece en el PDF)"
+    },
+    "answer": "a",
+    "explanation": "En el procedimiento especial de protección del derecho de reunión, el plazo es muy breve: 48 horas (LJCA).",
+    "id": 56
+  }
+]
